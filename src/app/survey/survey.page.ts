@@ -62,9 +62,8 @@ export class SurveyPage implements OnInit {
    * Initialises the survey and displays it on the screen
    */
   ngOnInit() {
-    // set statusBar to visible on Android
-    this.statusBar.styleLightContent();
-    this.statusBar.backgroundColorByHexString('#0F2042');
+    // set statusBar to hidden on Android
+    this.statusBar.hide();
 
     // 
     window.addEventListener('message', function(e) {

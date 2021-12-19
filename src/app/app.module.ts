@@ -24,6 +24,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
 
 export function LanguageLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -46,7 +49,8 @@ export function LanguageLoader(http: HttpClient) {
         useFactory: (LanguageLoader),
         deps: [HttpClient]
       }
-    })],
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     StatusBar,
     SplashScreen,

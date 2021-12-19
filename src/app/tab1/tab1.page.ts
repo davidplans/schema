@@ -87,9 +87,8 @@ export class Tab1Page {
     }
 
     ngOnInit() {
-      // set statusBar to be visible on Android
-      this.statusBar.styleLightContent();
-      this.statusBar.backgroundColorByHexString('#0F2042');
+      // set statusBar to be hidden on Android
+      this.statusBar.hide();
 
       // need to subscribe to this event in order
       // to ensure that the page will refresh every

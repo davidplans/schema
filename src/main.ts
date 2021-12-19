@@ -3,6 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 //(<any>window).skipLocalNotificationReady = true;
 
