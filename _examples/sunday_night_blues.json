@@ -139,7 +139,7 @@
               "id": "about_you_q7",
               "type": "text",
               "subtype": "long",
-              "text": "What is your height (in feet and inches)?",
+              "text": "What is your height (in cm)?",
               "required": false              
             },
             {
